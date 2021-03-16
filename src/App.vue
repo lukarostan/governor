@@ -11,6 +11,10 @@ import PageHeader from './components/PageHeader'
 import Content from './components/Content'
 import PageFooter from './components/PageFooter'
 export default {
+  created(){
+    this.$store.dispatch('getTowns')
+    this.$store.dispatch('getCounties')
+  },
   name: 'App',
   components: {
     PageHeader,
@@ -36,6 +40,7 @@ export default {
   padding: 0
   box-sizing: border-box
   font-family: 'Open Sans', sans-serif
+
 body
   display: flex
   flex-direction: column

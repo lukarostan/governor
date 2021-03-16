@@ -2,7 +2,7 @@
     <div class="header">
         <img src="../assets/Icon-Menu-Logo.svg" alt="">
         <div class="lang">
-            <button>EN</button>
+            <button class="active">EN</button>
             <button>HR</button>
         </div>
     </div>
@@ -20,6 +20,8 @@ export default {
         justify-content: space-evenly
         button
             color: #756DFF
+            border: none
+        .active
             border: 1px solid #756DFF
         
 @media only screen and (min-width: 600px)
@@ -29,7 +31,10 @@ export default {
         justify-content: space-between
         button
             color: white
+            border: none
+        .active
             border: 1px solid white
+
 
 .header
     display: flex
@@ -43,4 +48,7 @@ export default {
     button
         background: transparent
         padding: 5px 30px
+    button:hover
+        cursor: pointer
+
 </style>

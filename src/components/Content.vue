@@ -1,7 +1,7 @@
 <template>
     <div class="content">
+        <div class="triangle"></div>
         <div class="title">
-            <div class="triangle"></div>
             <h1>Who's Your <br><b>Governor?</b></h1>
         </div>
         <Form />
@@ -34,19 +34,21 @@ $primary: #6C63FF
         width: 65%
         .title
             position: relative
+            top: 100px
+            left: 30px
     
 .content
     margin: auto
-    min-height: calc(100vh - 70px)
+    min-height: calc(100vh + 110px)
     .triangle
         width: 0
         height: 0
         border-style: solid
-        border-width: 2000px 0 0 2000px
+        border-width: 2500px 0 0 2500px
         border-color: transparent transparent transparent #ffffff
         position: absolute
-        left: -400px
-        bottom: -1000px
+        left: -100px
+        bottom: -550px
         z-index: -1
     .title
         width: fit-content

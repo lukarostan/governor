@@ -7,15 +7,15 @@
             <div class="location">
                 <li class="data-item">
                     <span class="data-label">Governor</span>
-                    <p class="data-value">Jure Juric</p>
+                    <p class="data-value">.</p>
                 </li>
                 <li class="data-item">
                     <span class="data-label">Vice Governor</span>
-                    <p class="data-value">Jure panda</p>
+                    <p class="data-value">.</p>
                 </li>
                 <li class="data-item">
                     <span class="data-label">Address</span>
-                    <p class="data-value">Jure Jurica 23</p>
+                    <p class="data-value">.</p>
                 </li>
                 <li class="data-item">
                     <span class="data-label">Zip Code</span>
@@ -23,21 +23,21 @@
                 </li>
                 <li class="data-item">
                     <span class="data-label">Country</span>
-                    <p class="data-value">Afghanistan</p>
+                    <p class="data-value">Croatia</p>
                 </li>
             </div>
             <div class="contact">
                 <li class="data-item">
                     <span class="data-label">Web</span>
-                    <p class="data-value">www.ccccccc.coom</p>
+                    <a class="data-value" href="www.example.com">www.example.com</a>
                 </li>
                 <li class="data-item">
                     <span class="data-label">Email</span>
-                    <p class="data-value">panda@sjidsj.coom</p>
+                    <a class="data-value" href="mailto:town@town.com">town@town.com</a>
                 </li>
                 <li class="data-item">
                     <span class="data-label">Phone</span>
-                    <p class="data-value">031 031 0310</p>
+                    <a class="data-value" href="tel:+310310310">031 031 0310</a>
                 </li>
                 <li class="data-item">
                     <span class="data-label">Fax</span>
@@ -73,7 +73,7 @@ $light: #756DFF
         width: 100%
         margin: auto
         .title-container
-            padding: 50px 250px 50px 300px
+            padding: 40px 250px 40px 300px
             width: 1500px 
             transform: translateX(-900px)
             display: flex
@@ -87,10 +87,11 @@ $light: #756DFF
             .data-item
                 margin: 30px 50px
                 justify-content: space-between
-                min-width: 25vw
+                min-width: 22vw
 
 
 .details-container
+    background: white
     .title-container
         color: white
         background: $primary
@@ -109,7 +110,7 @@ $light: #756DFF
                 color: $primary
             .data-value
                 color: $light
-                
+                text-decoration: none
             .data-value::after
                 content: ""
                 display: block
