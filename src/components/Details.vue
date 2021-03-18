@@ -1,7 +1,7 @@
 <template>
     <div  class="details-container">
         <div class="title-container">
-            <h2>Details for Zagreb</h2>
+            <h2>Details for town.opcina</h2>
         </div>
         <ul class="details">
             <div class="location">

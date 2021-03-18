@@ -17,6 +17,7 @@
                     <li 
                     v-for="county in filteredCounties" 
                     :key="county.id"
+                    v-on:mousedown="countyClickHandler(county.zupanija)"
                     >
                     {{county.zupanija}}
                     </li>
@@ -38,6 +39,7 @@
                     <li
                     v-for="town in filteredTowns"
                     :key="town.id"
+                    v-on:mousedown="townClickHandler(town)"
                     >
                     {{town.opcina}}
                     </li>
@@ -73,25 +75,24 @@ export default {
         },
         filteredTowns(){
             return this.$store.state.towns.filter((town)=> {
-                return town.opcina.match(this.townFilter);
+                return town.opcina.match(this.townFilter) 
             })
-        }
+        },
+        
     },
     methods:{
         showSelector: (id) => document.getElementById(id).style.display = "block",
         hideSelector: (id) => document.getElementById(id).style.display = "none",
-        countySelectHandler: () => {
-            console.log("22")
-        }
-
-        /* handleCountyInput: (id) =>{
-            var countyFilter = document.getElementById(id).value;
-            this.$store.commit('filterCounties', countyFilter)
+        countyClickHandler: ( zupanija, selectedCounty) => {
+            selectedCounty = zupanija
+            console.log(selectedCounty)
+            document.getElementById("countyInput").setAttribute('value', zupanija)
         },
-        handleTownInput: (id) =>{
-            var townFilter = document.getElementById(id).value;
-            console.log(townFilter)
-        } */
+        townClickHandler: (town) =>{
+            document.getElementById("townInput").setAttribute('value', town.opcina)
+            document.getElementById("countyInput").setAttribute('value', town.zupanija)
+            }
+    
     }
 }
 </script>
@@ -143,10 +144,10 @@ $primary: #6C63FF
                 color: #B2AEFF
             .form-selector
                 list-style-type: none
-                height: 150px
+                display: none
                 overflow-y: auto
                 border-top: 3px solid $primary
-                display: none
+                height: 150px
                 max-width: 300px
                 z-index: 2
                 li
